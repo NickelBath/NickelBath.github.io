@@ -1,0 +1,32 @@
+/* the loading */
+
+
+
+body {
+    font-family: monospace;
+    background-color: rgb(50, 50, 70);
+}
+
+h1 {
+    text-align: center;
+    color:white;
+}
+textarea {
+    font: monospace;
+    color: white;
+    background-color: rgb(70, 50, 80);
+    width: 800px;
+    height:600px;
+    border-radius: 15px;
+}
+input {
+    color:white;
+    font:monospace;
+    align-self: center;
+    border-radius: 10px;
+    border-right: 10px;
+}
+
+button {
+    background-color: darkgray;
+}
