@@ -1,14 +1,17 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;    
-    background-color: white;
+    font-family: monospace; 
+    font-weight: bold;
+    background: rgb(0,0,0);
+    
 }
-
 p {
-    color: black;
+    color: rgb(0, 255, 0);
     font: size 20px;
-    text-shadow: 2px 1px lightgray;
+    
 }
-
+h1 {
+    color: rgb(0, 255, 0);
+}
 button {
     color: white;
     background: none;
@@ -19,7 +22,7 @@ ul {
     margin: 0;
     padding: 0;
     text-transform: capitalize;
-    border: 2px solid black;
+    border: 1.5px solid rgb(0, 255, 0);
 }
 
 li {
@@ -29,7 +32,7 @@ li {
 }
 /* link colors */
 a {
-    color: black;
+    color: rgb(0, 255, 0);
     
 }
 
