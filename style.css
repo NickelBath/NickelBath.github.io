@@ -1,0 +1,41 @@
+body {
+    font-family: monospace; 
+    font-weight: bold;
+    background: rgb(0,0,0);
+    
+}
+p {
+    color: rgb(0, 255, 0);
+    font: size 20px;
+    
+}
+h1 {
+    color: rgb(0, 255, 0);
+}
+button {
+    color: white;
+    background: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    border: 1.5px solid rgb(0, 255, 0);
+}
+
+li {
+    display: inline;
+    color: white;
+
+}
+/* link colors */
+a {
+    color: rgb(0, 255, 0);
+    
+}
+
+a:hover {
+    text-transform:uppercase;
+}
