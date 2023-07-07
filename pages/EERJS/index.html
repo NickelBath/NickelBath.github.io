@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<!-- meta -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Online JavaScript IDE to make creating Everybody Edits bots a bit less of a hassle.">
+		<meta name="keywords" content="Everybody Edits, EE, JavaScript IDE, JS IDE">
+		<meta name="author" content="SirJosh3917">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- title -->
+		<title>Everybody Edits JavaScript IDE</title>
+	</head>
+
+	<body>
+		<div id="editor" class="show-on-load" style="display: none;">
+			<table class="jside">
+				<tbody>
+					<tr>
+						<td class="td-menu">
+							<table class="menu">
+								<tbody>
+									<tr>
+										<td>
+											<input type="text" id="input-email" placeholder="EE Email">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="password" id="input-password" placeholder="EE Password">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" id="input-world" placeholder="World ID">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<button id="button-connect" onclick="eeide.connect()" title="Connect to EE using the specified email and password.">Authenticate</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<button id="button-compile" onclick="eeide.compile()" title="Run the code in the editor" disabled=true>Run</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<button id="button-transcode" onclick="eeide.transcode()" title="Compiles your code into a single HTML document">Transcode</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<select id="demo-load">
+												<option value="basic">Basic Demo</option>
+												<option value="blockhandler">BlockHandler 2.0 Demo</option>
+												<option value="jsparse">jsparse Demo</option>
+											</select>
+											
+											<button id="button-load-demo" onclick="eeide.loaddemo()" title="Load one of the multiple demos in store">Load Demo</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<textarea id="log" class="log" rows=16></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td class="td-editor">
+							<table class="editor">
+								<div id="jscode"></div>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div id="loading" class="hide-on-load">
+			<div class="loader"></div>
+		</div>
+
+		<!-- includes -->
+		<div id="includes" class="invisible" style="display: none;">
+			<link rel="stylesheet" href="styles.css">
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/PlayerIOClient.development.js"></script>
+
+			<script src="js/jsparse_clean.js"></script>
+
+			<script src="js/ConnectHandler.js"></script>
+			<script src="js/BlockHandler.js"></script>
+
+			<script src="js/EEIDE.js"></script>
+			
+			<script src="js/completion.js"></script>
+		</div>
+	</body>
+</html>

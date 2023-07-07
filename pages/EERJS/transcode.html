@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Transcoded Bot - from Everybody Edits JS IDE</title>
+		<script src="$baseUrl$js/PlayerIOClient.development.js"></script>
+		<script src="$baseUrl$js/jsparse_clean.js"></script>
+		<script src="$baseUrl$js/BlockHandler.js"></script>
+		<script src="$baseUrl$js/ConnectHandler.js"></script>
+		<link  href="$baseUrl$styles.css" rel="stylesheet"/>
+	</head>
+
+	<body>
+		<table class="menu" style="width: 50%; margin-left: 25%; margin-right: 25%; margin-top: 10%;">
+			<tbody>
+				<tr><td><input id="input-email" type="text" /></td></tr>
+				<tr><td><input id="input-password" type="text" /></td></tr>
+				<tr><td><input id="input-worldid" type="text" /></td></tr>
+				<tr><td><input onclick="connect();" type="button" value="Connect"></td></tr>
+				<tr><td><textarea id="log" rows=8></textarea></td></tr>
+			</tbody>
+		</table>
+		
+		<script>
+			function connect() {
+				let __EEJSIDE___ = document.getElementById("input-email");
+				let __EEJSIDE____ = document.getElementById("input-password");
+				let __EEJSIDE_____ = document.getElementById("input-worldid");
+				let __EEJSIDE______ = document.getElementById("log");
+				let __EEJSIDE_______ = function(msg, name = "EEJSIDE") {
+					__EEJSIDE______.innerHTML += new Date().toUTCString() + " [" + name + "]: " + msg + "\n";
+					__EEJSIDE______.scrollTo(0, __EEJSIDE______.scrollHeight);
+				};
+				
+				var client;
+				var connection;
+				var log = function(msg) {
+					__EEJSIDE_______(msg, "BOT");
+				}
+				
+				__EEJSIDE_______("Authenticating");
+				Promise.resolve(authenticate(__EEJSIDE___.value, __EEJSIDE____.value).then(__EEJSIDE_ => {
+					
+					__EEJSIDE_______("Joining Room");
+					Promise.resolve(joinRoom(__EEJSIDE_.cli, __EEJSIDE_.cfg, __EEJSIDE_____.value).then(__EEJSIDE__ => {
+						
+						__EEJSIDE_______("Running User Script");
+						client = __EEJSIDE_.cli;
+						connection = __EEJSIDE__.con;
+
+						//Here is where your bot code is!
+
+///$userCode$
+
+						//Here's where your bot code ends!
+					}).catch(__EEJSIDE__ => {
+						__EEJSIDE_______("Error Joining Room: " + __EEJSIDE__);
+					}));
+				}).catch(__EEJSIDE_ => {
+					__EEJSIDE_______("Error Authenticating: " + __EEJSIDE_);
+				}));
+			}
+		</script>
+	</body>
+</html>
