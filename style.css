@@ -1,16 +1,22 @@
 body {
     font-family: monospace; 
     font-weight: bold;
-    background: rgb(0,0,0);
+    background-size: 100% 5000%;
+    background-repeat:no-repeat;
+    margin: 20px;
     
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 p {
-    color: rgb(0, 255, 0);
+    color: black;
     font: size 20px;
-    
+    border: 1.5px solid black;
+    background: rgb(147,147,147);
+    background-repeat: no-repeat;
+    background: linear-gradient(0deg, rgba(147,147,147,1) 0%, rgba(255,255,255,1) 100%);
 }
 h1 {
-    color: rgb(0, 255, 0);
+    color: black;
 }
 button {
     color: white;
@@ -22,7 +28,11 @@ ul {
     margin: 0;
     padding: 0;
     text-transform: capitalize;
-    border: 1.5px solid rgb(0, 255, 0);
+    
+    background: rgb(147,147,147);
+    background-repeat: no-repeat;
+    background: linear-gradient(0deg, rgba(147,147,147,1) 0%, rgba(255,255,255,1) 100%);
+    border: 1.5px solid black;
 }
 
 li {
@@ -32,7 +42,9 @@ li {
 }
 /* link colors */
 a {
-    color: rgb(0, 255, 0);
+    text-shadow: black;
+    color: black;
+    
     
 }
 
