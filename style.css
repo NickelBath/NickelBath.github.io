@@ -1,11 +1,15 @@
-body {
+body {    
+    margin: 20px;
+    
     font-family: monospace; 
     font-weight: bold;
     background-size: 100% 5000%;
     background-repeat:no-repeat;
-    margin: 20px;
+    background: rgb(147,147,147);
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, rgba(147,147,147,1) 0%, rgba(255,255,255,1) 100%);
+
     
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 p {
     color: black;
@@ -50,4 +54,17 @@ a {
 
 a:hover {
     text-transform:uppercase;
+}
+img {
+    border: 2px solid gray;
+}
+
+bar {
+    color: black;
+    font: size 20px;
+    border: 1.5px solid black;
+    
+    background: rgb(147,147,147);
+    background-repeat: no-repeat;
+    background: linear-gradient(0deg, rgba(147,147,147,1) 0%, rgba(255,255,255,1) 100%);
 }
